@@ -9,4 +9,5 @@ import {Component, VERSION} from '@angular/core';
 export class AppComponent {
   version = 'Angular version' + VERSION.major;
 
+  currentProgress = 70;
 }
