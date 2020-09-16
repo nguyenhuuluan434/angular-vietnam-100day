@@ -6,6 +6,13 @@ attribute directive chỉ thay đổi cách hiển thị (style) của DOM eleme
  trong [] sẽ được hiển thị, ngươc falsy sẽ bị xóa đi 
 
 
-class binding
+- class binding
 
-style binding
+[class.ten-class]
+ex: [class.red-border]="isDanger"
+
+[class]="array"
+ex: var ""
+
+
+- style binding
