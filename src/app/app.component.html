@@ -11,7 +11,12 @@
 
 <p [class]="classes"></p>
 
+<!--style by style name and style unit-->
+<p [style.color]="'red'" [style.background-color]="isDanger ?'yellow':'black'" [style.fontSize.rem]="2">
+  Start editing to see some magic
+</p>
 
-<p [style.color]="'red'" [style.background-color]="'yellow'" [style.fontSize.px]="2">
+<!--style by object -->
+<p [style.--text-color]="isDanger?'red':'blue'" [style]="{color:'var(--text-color)',backgroundColor:'yellow'}">
   Start editing to see some magic
 </p>
