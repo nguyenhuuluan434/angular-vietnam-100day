@@ -1,5 +1,17 @@
 <app-hello name="{{name}} {{version}}"></app-hello>
 
-<p class="foo" style="color: red">
+
+<button (click)="isDanger=!isDanger">Toggle Danger</button>
+<br>
+<button (click)="isWarning=!isWarning">Toggle Warning</button>
+
+<p class="box" [class.red-border]="isDanger" [class.yellow-background]="isWarning"></p>
+
+<p class="box" [class]="{'red-border':!isDanger,'yellow-background':!isWarning}"></p>
+
+<p [class]="classes"></p>
+
+
+<p [style.color]="'red'" [style.background-color]="'yellow'" [style.fontSize.px]="2">
   Start editing to see some magic
 </p>

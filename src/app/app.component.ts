@@ -9,4 +9,8 @@ import {Component, VERSION} from '@angular/core';
 export class AppComponent {
   version = 'Angular version' + VERSION.major;
   name = 'luannh';
+
+  isDanger = false;
+  isWarning = false;
+  classes = 'box red-border yellow-background';
 }
