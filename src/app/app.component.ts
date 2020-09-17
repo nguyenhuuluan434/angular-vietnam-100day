@@ -8,5 +8,7 @@ import {Component, VERSION} from '@angular/core';
 })
 export class AppComponent {
   version = 'Angular version' + VERSION.major;
+  name: string;
+  isCheck = false;
 
 }
