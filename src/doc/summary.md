@@ -22,3 +22,5 @@ parent component sử dụng binding để listen event and call a function to h
     this.authors = this.authors.filter(item => item.id !== author.id);
   }
 ```
+
+Event up: propagation from child component to parent component

@@ -8,7 +8,8 @@ import {Author} from '../authors';
 })
 export class AuthorDetailComponent implements OnInit {
   @Input() author: Author;
-  @Output() deleteAuthor = new EventEmitter<Author>();
+  @Output() deleteAuthor = new EventEmitter<number>();
+  @Output() selectAuthor = new EventEmitter<Author>();
 
   constructor() {
   }
@@ -17,6 +18,10 @@ export class AuthorDetailComponent implements OnInit {
   }
 
   handleDelete() {
-    this.deleteAuthor.emit(this.author);
+    this.deleteAuthor.emit(this.author.id);
+  }
+
+  select() {
+    this.selectAuthor.emit(this.author);
   }
 }

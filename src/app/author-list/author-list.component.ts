@@ -9,6 +9,8 @@ import {Author, authors} from '../authors';
 export class AuthorListComponent implements OnInit {
 
   authors = authors;
+  // @ts-ignore
+  currentAuth: authors[0];
 
   constructor() {
   }
@@ -16,7 +18,14 @@ export class AuthorListComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  handleRemoveAuthor(author: Author) {
-    this.authors = this.authors.filter(item => item.id !== author.id);
+  handleRemoveAuthor(id: number) {
+    this.authors = this.authors.filter(author => author.id !== id);
+    if (this.currentAuth.id === id) {
+      this.currentAuth = this.authors[0];
+    }
+  }
+
+  onSelected(author: Author) {
+    this.currentAuth = author;
   }
 }
